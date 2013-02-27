@@ -1,0 +1,7 @@
+===========================
+Django Vcards Changelog
+===========================
+
+Version 0.8, 15th Feb 2013:
+---------------------------
+* First packaged version

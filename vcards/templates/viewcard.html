@@ -1,0 +1,49 @@
+{% load  i18n   %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<head>
+    	<meta name="author" content="" />
+        <title></title>
+       <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+       <style>
+       	.photo{
+       		 vertical-align: middle;
+    		 height: 100%;
+    		 width:150px;
+    		 float:right;
+       	}
+       	.card{
+       		background-color:#000000;
+       		color: #333333;
+       		
+       		-moz-border-radius: 15px;
+			border-radius: 15px;
+       	}
+       	
+       	
+       </style>
+</head>
+<body>
+<div class="container">  
+	<div class="hero-unit">
+		<img class="photo" src="{{MEDIA_URL}}{{vcard.image}}">
+				<h2>{{vcard.firstname}} {{vcard.lastname}} </h2><br>
+				{{vcard.address}}<br>
+				{{vcard.city}}, {{vcard.province}} {{vcard.postal_code}}<br>
+				{{vcard.country}}<br>
+				<img class="photo" src="{{MEDIA_URL}}{{vcard.vcf_name}}.jpg">
+
+				<abbr title="Phone">P:</abbr> {{vcard.phone}} <br>
+				<abbr title="Fax">F:</abbr> {{vcard.fax}} <br>
+				<abbr title="Mobile">M:</abbr> {{vcard.mobile}}<br> 
+				<abbr title="Email">E:</abbr> {{vcard.email}} <br>
+				<abbr title="VcardLink">VCard Url:</abbr> {{ site_url }}{{ vcard.vcf_name }} <br>
+
+
+	</div>
+
+		
+</div>
+
+
+</body>
+</html>
