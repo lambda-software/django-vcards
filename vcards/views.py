@@ -19,10 +19,13 @@ def mobile(request):
     
     if ua.find("iphone") > 0:
         device = "iphone"
-        
+        if ua.find("os 7")  > 0:
+            device = "ios7"
     elif ua.find("ipad") > 0:
         device = "ipad"
-        
+        if ua.find("os 7")  > 0:
+            device = "ios7"
+
     elif ua.find("android") > 0:
         device = "android"
         
